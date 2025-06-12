@@ -23,7 +23,7 @@ if (latMatch && lonMatch) {
     let latSuffix = extractLast8(rawLat);
     let lonSuffix = extractLast8(rawLon);
 
-    // 用倒数两位数字组成控制值（如 "78"）
+    // 用倒数三位数字组成控制值（如 "789"）
     let latControl = latSuffix.slice(-3);
     let lonControl = lonSuffix.slice(-3);
 
