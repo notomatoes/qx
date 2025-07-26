@@ -23,9 +23,9 @@ if (latMatch && lonMatch) {
     let latSuffix = extractLast8(rawLat);
     let lonSuffix = extractLast8(rawLon);
 
-    // 用倒数三位数字组成控制值（如 "789"）
-    let latControl = latSuffix.slice(-3);
-    let lonControl = lonSuffix.slice(-3);
+    // 用倒数七位数字组成控制值（如 "789"）
+    let latControl = latSuffix.slice(-7);
+    let lonControl = lonSuffix.slice(-7);
 
     let newLatPrefix = generatePrefix(26.0938, 0.0001, 15, latControl);
     let newLonPrefix = generatePrefix(119.3098, 0.0001, 17, lonControl);
